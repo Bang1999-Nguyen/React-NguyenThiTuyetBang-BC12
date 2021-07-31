@@ -1,0 +1,133 @@
+
+.image{
+    width:120px;
+}
+.header img{
+    width:300px;
+}
+.selectItem{
+    margin:30px auto;
+    width:65%;
+    transform: translateX(30%);
+    background-color: white;
+    border:1px solid #ccc;
+}
+
+.model {
+    position:relative;
+}
+.content .glasses{
+    position:absolute;
+    width:180px;
+    right:585px;
+    top:90px;
+}
+p {
+    margin: 0 !important;
+  }
+  
+  #box-car {
+    padding: 0;
+    height: 402px;
+  }
+  
+  .cloudimage-360.initialized {
+    width: 73% !important;
+  }
+  
+  .active {
+    border: 2px solid #2198dc !important;
+  }
+  
+  .bg-car {
+    background-color: #e5e5e5;
+  }
+  
+  .crystal {
+    border: 2px solid #dbdbdb;
+    margin-bottom: 10px;
+  }
+  
+  .crystal:hover {
+    cursor: pointer;
+  }
+  
+  .crystal .thumb {
+    display: table-cell;
+  }
+  
+  .crystal .thumb img {
+    height: 5rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.8rem;
+    padding-top: 0.8rem;
+    width: auto;
+  }
+  
+  .crystal .color-info {
+    display: table-cell;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    vertical-align: middle;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  
+  .included {
+    color: #dbdbdb;
+  }
+  .price {
+    color: #2198dc;
+    font-size: 15px;
+  }
+  .crystalImage{
+    width:60px;
+  }
+  .title{
+    padding-left:20px;
+    padding-top:8px;
+  }
+  .name{
+    text-align:left;
+  }
+  .card .card-header{
+    color:#2198dc;
+    text-align:left;
+  }
+  .detailCar .card-header{
+    color:#2198dc;
+    text-align:left;
+  }
+  .table tr td{
+    text-align:left;
+  }
+  .sectionOne{
+    background-image: url('./assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height:800px;
+    margin-bottom: 100px;
+  }
+  .Glasses{
+    display:none;
+  }
+  .background{
+    height:80px;
+    width:300px;
+    position:absolute;
+    right:525px;
+    top:285px;
+    background-color: orange;
+    opacity: 0.5;
+  }
+  .detail {
+    font-weight:600;
+    line-height:20px;
+    margin-top:20px;
+  }
+  .View-360{
+    margin-right:650px;
+    margin-bottom: 10px;
+    margin-left:20px;
+  }
