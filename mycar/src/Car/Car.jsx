@@ -13,17 +13,25 @@ export class Car extends Component {
         horsepower: "158 @ 6500 rpm",
         torque: "138 lb-ft @ 4200 rpm",
         redline: "6700 rpm",
-        img:  "images-black/images-black-1/"
+        img:  "images-black/images-black-1/",
+        idWheel: 1,
     }
-    handleChangeColor = (srcImg, color, price) => {
-           this.setState({
-               srcImg,
-               color,
-               price,
-           })
+    handleChangeColor = (srcImg, color, price, idWheel) => {
+        this.setState({
+            srcImg,
+            color,
+            price,
+            idWheel
+        })
+    }
+    chooseWheel = (srcImg, item) => {
+        this.setState({
+            srcImg: `images-${this.state.color}/images-${this.state.color}-${item.idWheel}/civic-1.jpg`,
+            idWheel: item.idWheel,
+        })
     }
     render() {
-        const {srcImg} = this.state;
+        const {srcImg, color, idWheel} = this.state;
         return (
             <div className="container-fluid">
                 <div className="row">
@@ -77,7 +85,7 @@ export class Car extends Component {
                     {
                         CarData.map((car, index) =>{
                             const {id, title, type, img, srcImg, color, price, engineType} = car;
-                            return(<li className="list-group-item" key={index} onClick={() => this.handleChangeColor(srcImg, color, price)} >
+                            return(<li className="list-group-item" key={index} onClick={() => this.handleChangeColor(`images-${color}/images-${color}-${idWheel}/civic-1.jpg`, color, price, idWheel)} >
                             <div className="item d-flex">
                                     <img src={img} className="crystalImage"/>
                             <div className="title">
@@ -118,22 +126,4 @@ export class Car extends Component {
     </div>
         )
     }
-    chooseWheel = (srcImg, item) => {
-        if(srcImg === `images-${this.state.color}/images-${this.state.color}-1/civic-1.jpg` || srcImg === `images-${this.state.color}/images-${this.state.color}-2/civic-1.jpg` || srcImg === `images-${this.state.color}/images-${this.state.color}-3/civic-1.jpg` || `images-black/images-black-1/civic-1.jpg`){
-            if(item.idWheel === 1){
-                this.setState({
-                    srcImg: `images-${this.state.color}/images-${this.state.color}-1/civic-1.jpg`
-                })
-            }else if(item.idWheel === 2){
-                this.setState({
-                   srcImg: `images-${this.state.color}/images-${this.state.color}-2/civic-1.jpg`
-                })
-            }else if(item.idWheel === 3){
-                this.setState({
-                   srcImg: `images-${this.state.color}/images-${this.state.color}-3/civic-1.jpg`
-                })
-            }
-        }
-    }
-    
 }
